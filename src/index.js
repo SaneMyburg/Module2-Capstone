@@ -1,6 +1,8 @@
 import './style.css';
-import { getData } from './Modules/display.js';
+import MealList from './Modules/display.js';
+
+const mealList = new MealList();
 
 window.addEventListener('DOMContentLoaded', () => {
-  getData();
+  mealList.getData();
 });
