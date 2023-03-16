@@ -1,3 +1,4 @@
+// index.js
 import './style.css';
 import {
   showAllFood,
