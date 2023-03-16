@@ -4,7 +4,6 @@
   <h3><b>Webpack Setup</b></h3>
 </div>
 
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -42,7 +41,6 @@
 
 > Tis is just a simple setup of webpack to use in my projects.
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
@@ -56,6 +54,7 @@
 > Get a link of this repository and clone it to your local machine.
 
 To get a local copy up and running, follow these steps:
+
 - Get a copy of the project
 - Come into the project directory
 - Open the project using code editor of your choice
@@ -64,6 +63,7 @@ To get a local copy up and running, follow these steps:
 ### Prerequisites
 
 In order to run this project you need:
+
 - You need a GitHub account.
 - You need to have a Git client installed on your computer.
 - You need to have a copy of the HTML CSS website codebase on your computer.
@@ -90,7 +90,6 @@ To run the project, simply run the HTML document to preferrably Google Chrome.
 
 To run tests, you can use Chrome Developer tools, simply run the HTML document in Google Chrome and right-click the HTML element you want to inspect. Click on "Inspect" and you will have the tools to run, analyze, and even debug the code.
 
-
 ### Deployment
 
 You can deploy this project using:
@@ -98,16 +97,14 @@ Github Pages
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 👥 Authors <a name="authors"></a>
 
 > Sane Myburg
-👤 **Author1**
+> 👤 **Author1**
 
 - GitHub: [@githubhandle](https://github.com/SaneMyburg)
 - Twitter: [@twitterhandle](https://twitter.com/@SaneMyburg)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/SaneMyburg)
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -127,7 +124,6 @@ Feel free to check the [issues page](https://github.com/SaneMyburg/Webpack/issue
 
 > Give a ⭐️ if you like this project!
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
@@ -135,7 +131,6 @@ Feel free to check the [issues page](https://github.com/SaneMyburg/Webpack/issue
 I would like to thank [Microverse](www.microverse.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- LICENSE -->
 
