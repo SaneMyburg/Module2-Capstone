@@ -1,8 +1,17 @@
 import './style.css';
-import MealList from './Modules/display.js';
+import {
+  showAllFood,
+  getAllFoodData,
+  getAllLikes,
+  displayitemCounter,
+} from './Modules/Methods-all.js';
 
-const mealList = new MealList();
-
-window.addEventListener('DOMContentLoaded', () => {
-  mealList.getData();
+getAllFoodData().then(() => {
+  getAllLikes()
+    .then(() => {
+      showAllFood();
+    })
+    .then(() => {
+      displayitemCounter();
+    });
 });
