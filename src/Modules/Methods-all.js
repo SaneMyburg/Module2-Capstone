@@ -6,7 +6,7 @@ const foodList = new FoodList();
 const InvoApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/'
   + 'capstoneApi/apps/';
 const InvoApiIDLikes = 'zX9lc5HNiZeTfJrwouGw';
-const InvoApiIDComments = 'BCgQZ9BLHImPPHTkY41N';
+const InvoApiIDComments = 'zX9lc5HNiZeTfJrwouGw';
 const likesUrl = '/likes';
 const commentsUrl = '/comments';
 // Assigning Meals DB API link
