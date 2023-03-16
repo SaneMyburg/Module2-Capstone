@@ -1,29 +1,37 @@
-const mealAppUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/ENGNIRTAK9Pvf9V8cU4n';
-const likesUrl = `${mealAppUrl}/likes`;
-
-export const getLikesCount = async () => {
-  try {
-    const response = await fetch(`${likesUrl}`);
-    const data = await response.json();
-    return data.likes;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-
-export const updateLikesCount = async (likesCount) => {
-    console.log('Likes count:', likesCount);
-  const response = await fetch(`${likesUrl}`, {
+async function addLikes(id) {
+  fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/baKrJfCyF9gZCtXak8eu/likes', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ likes: likesCount })
-  });
-  const data = await response.json();
-  return data.likes;
-};
+    body: JSON.stringify({
+      item_id: id,
+      likes: 1,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+      Accept: 'application/json',
+    },
+  })
+    .then((response) => response.json());
+}
 
+async function showLikes(id) {
+  const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/baKrJfCyF9gZCtXak8eu/likes',
+    {
+      method: 'GET',
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
 
-
-
- 
+  try {
+    const data = await res.json();
+    const likesCount = document.getElementById(`id${id}`);
+    data.map((like) => {
+      if (like.item_id === id) {
+        likesCount.textContent = `${like.likes} likes`;
+      }
+      return true;
+    });
+  } catch (error) {
+  }
+}
+export { addLikes, showLikes };
