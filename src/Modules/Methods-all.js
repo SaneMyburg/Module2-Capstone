@@ -6,7 +6,7 @@ const foodList = new FoodList();
 const InvoApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/'
   + 'capstoneApi/apps/';
 const InvoApiIDLikes = 'zX9lc5HNiZeTfJrwouGw';
-const InvoApiIDComments = "zX9lc5HNiZeTfJrwouGw";
+const InvoApiIDComments = 'zX9lc5HNiZeTfJrwouGw';
 const likesUrl = '/likes';
 const commentsUrl = '/comments';
 // Assigning Meals DB API link
@@ -30,6 +30,9 @@ export const getComments = (id) => new Promise((resolve) => {
     });
     foodList.addComments(id, commValid.reverse());
     resolve();
+    const postComment = (id, input, textarea) => {
+      
+    }
   });
 });
 
@@ -77,21 +80,21 @@ export const displayPopUp = (id) => {
     const foodDescElement = document.getElementById('recipes');
     foodDescElement.innerHTML = foodItem.strInstructions;
   });
-  //   getComments(id).then(() => {
-  //     const { comments } = foodList.foods[id];
-  //     const commentsHeader = document.getElementById("comments-header");
-  //     const commentWrapper = document.getElementById("comments");
-  //     if (comments.length) {
-  //       // add counter to comments header
-  //       commentsHeader.innerHTML += `<span class="food-count-icon">${foodList.getCommentsCount(
-  //         id
-  //       )}</span>`;
+  getComments(id).then(() => {
+    const { comments } = foodList.foods[id];
+    const commentsHeader = document.getElementById('comments-header');
+    const commentWrapper = document.getElementById('comments');
+    if (comments.length) {
+      // add counter to comments header
+      commentsHeader.innerHTML += `<span class="food-count-icon">${foodList.getCommentsCount(
+        id,
+      )}</span>`;
 
-//       //       comments will be added here.........
-//     } else {
-//       commentWrapper.innerHTML = "no comments";
-//     }
-//   });
+      //       comments will be added here.........
+    } else {
+      commentWrapper.innerHTML = 'no comments';
+    }
+  });
 };
 
 export const likeFood = (id) => {
