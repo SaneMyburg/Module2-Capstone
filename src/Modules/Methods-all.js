@@ -152,7 +152,7 @@ export const likeFood = (id) => {
   });
 };
 
-export const showAllFood = () => {
+export const mealsShowAll = () => {
   foodListWrapper.innerHTML = '';
   Object.keys(foodList.foods).forEach((foodId) => {
     const food = foodList.foods[foodId];
@@ -206,7 +206,7 @@ export const getAllLikes = () => new Promise((res) => {
   });
 });
 
-export const displayitemCounter = () => {
+export const ItemCounterDisplay = () => {
   const size = foodList.getItemsCount();
   itemCounter.innerHTML = `<span class="food-count-icon">${size}<span>`;
 };
