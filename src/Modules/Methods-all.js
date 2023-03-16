@@ -6,7 +6,7 @@ const foodList = new FoodList();
 const InvoApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/'
   + 'capstoneApi/apps/';
 const InvoApiIDLikes = 'zX9lc5HNiZeTfJrwouGw';
-const InvoApiIDComments = 'zX9lc5HNiZeTfJrwouGw';
+const InvoApiIDComments = 'TOQ2SNV5DoVM0bMfqikl';
 const likesUrl = '/likes';
 const commentsUrl = '/comments';
 // Assigning Meals DB API link
@@ -30,11 +30,28 @@ export const getComments = (id) => new Promise((resolve) => {
     });
     foodList.addComments(id, commValid.reverse());
     resolve();
-    const postComment = (id, input, textarea) => {
-      
-    }
   });
 });
+
+const commentPost = (id, input, textarea) => {
+  const commentmainUrl = InvoApiUrl + InvoApiIDComments + commentsUrl;
+  const data = {
+    item_id: id,
+    username: input.value,
+    comment: textarea.value,
+  };
+  postData(commentmainUrl, data).then((result) => {
+    if (result.status === 201) {
+      input.value = '';
+      textarea.value = '';
+      const commentWrapper = document.getElementById('all-comments');
+      commentWrapper.innerHTML += `<li class="single-comment">
+              <h4 class="name-commenter">${data.username}</h4>
+              <p class="comment-message">${data.comment}</p>
+              </li> `;
+    }
+  });
+};
 
 export const displayPopUp = (id) => {
   commentPopup.classList.add('show');
@@ -67,19 +84,29 @@ export const displayPopUp = (id) => {
   const commentForm = document.getElementById('comment-form');
   commentForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    // postComment(id, e.target.name, e.target.comment);
+    commentPost(id, e.target.name, e.target.comment);
   });
 
-  const closeButton = document.getElementById('popup-btn-close');
-  closeButton.addEventListener('click', () => {
+  const btnClose = document.getElementById('popup-btn-close');
+  btnClose.addEventListener('click', () => {
     commentPopup.classList.remove('show');
   });
   const URL = `${MealApiUrl}lookup.php?i=${id}`;
   getMealData(URL).then((result) => {
-    const foodItem = result.meals[0];
-    const foodDescElement = document.getElementById('recipes');
-    foodDescElement.innerHTML = foodItem.strInstructions;
+    const mealType = result.meals[0];
+    const mealDesciprtion = document.getElementById('recipes');
+    mealDesciprtion.innerHTML = mealType.strInstructions;
   });
+
+  //
+  const dateOfComment = (strDate) => {
+    const diff = Date.now() - Date.parse(strDate);
+    const diffInDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+    if (diffInDays === 0) return 'Today';
+    if (diffInDays === 1) return 'Yesterday';
+    return `${diffInDays} days ago`;
+  };
+
   getComments(id).then(() => {
     const { comments } = foodList.foods[id];
     const commentsHeader = document.getElementById('comments-header');
@@ -91,6 +118,17 @@ export const displayPopUp = (id) => {
       )}</span>`;
 
       //       comments will be added here.........
+      comments.forEach((comment) => {
+        commentWrapper.innerHTML += `<li class="comment">
+        <div class="comment-header">
+          <h4 class="comment-author">${comment.username}</h4>
+          <span class="comment-date">${dateOfComment(
+    comment.creation_date,
+  )}</span>
+        </div>
+        <p class="comment-message">${comment.comment}</p>
+        </li> `;
+      });
     } else {
       commentWrapper.innerHTML = 'no comments';
     }
@@ -141,8 +179,8 @@ export const showAllFood = () => {
     });
   });
 
-  const likeButtons = foodListWrapper.querySelectorAll('.give-likes');
-  likeButtons.forEach((likeButton) => {
+  const likeBtns = foodListWrapper.querySelectorAll('.give-likes');
+  likeBtns.forEach((likeButton) => {
     const foodId = likeButton.parentElement.parentElement.id;
     likeButton.addEventListener('click', () => {
       likeFood(foodId);
