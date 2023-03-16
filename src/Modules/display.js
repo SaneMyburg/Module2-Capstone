@@ -19,7 +19,9 @@ async function getData() {
           </div>
         </div>
         <button id="${meal.idMeal}">Comment</button>
+        <button class="btn btn-comment">Click for More</button>
       </div>
+
     `;
   });
   allFoods.innerHTML = output;
