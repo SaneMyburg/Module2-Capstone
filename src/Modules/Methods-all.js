@@ -5,7 +5,8 @@ const foodList = new FoodList();
 // Assigning Involvement API link
 const InvoApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/'
   + 'capstoneApi/apps/';
-const InvoApiIDLikes = 'zX9lc5HNiZeTfJrwouGw';
+const InvoApiIDLikes = 'pEBOCO8kM8wbh9szd9yj';
+// const InvoApiIDLikes = 'zX9lc5HNiZeTfJrwouGw';
 const InvoApiIDComments = 'TOQ2SNV5DoVM0bMfqikl';
 const likesUrl = '/likes';
 const commentsUrl = '/comments';
@@ -190,18 +191,18 @@ export const showAllFood = () => {
 
 export const getAllFoodData = () => new Promise((resolve) => {
   getMealData(mealFullUrl).then((result) => {
-    foodList.addFoods(result.meals);
+    foodList.addMeals(result.meals);
     resolve();
   });
 });
 
-export const getAllLikes = () => new Promise((resolve) => {
-  const ALL_LIKES_API_URL = InvoApiUrl + InvoApiIDLikes + likesUrl;
-  getMealData(ALL_LIKES_API_URL).then((likesFromAPI) => {
+export const getAllLikes = () => new Promise((res) => {
+  const likesLinkAPI = InvoApiUrl + InvoApiIDLikes + likesUrl;
+  getMealData(likesLinkAPI).then((likesFromAPI) => {
     likesFromAPI.forEach((likeObject) => {
       foodList.setLikes(likeObject.item_id, likeObject.likes);
     });
-    resolve();
+    res();
   });
 });
 
