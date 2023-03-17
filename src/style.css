@@ -295,16 +295,19 @@ a:active {
 #comments li .comment-author {
   font-weight: 700;
   font-size: 0.9rem;
+  padding-top: 10px;
 }
 
 #comments li .comment-date {
   color: #999;
   font-size: 0.75rem;
+  padding-top: 10px;
 }
 
 #comments li .comment-message {
   font-size: 0.75rem;
   margin-left: 0;
+  padding-top: 10px;
 }
 
 #comment-form {
