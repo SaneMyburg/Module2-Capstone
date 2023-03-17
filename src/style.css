@@ -3,7 +3,7 @@
 
 * {
   border: 0;
-  margin: 0;
+  margin: -8px 0 0 0;
   font-family: lato, sans-serif;
 }
 
@@ -47,6 +47,7 @@ header {
 
 /* .name {
   color: white;
+  margin-top: 20px;
   font-family: "Calligraffitti", cursive;
   font-weight: 700;
   font-size: 3rem;
@@ -83,13 +84,12 @@ header {
 }
 
 div.bg {
-  background-image:
-    repeating-linear-gradient(
-      105deg,
-      var(--gold) 30%,
-      var(--dark-shadow) 5%,
-      var(--gold) 12%
-    );
+  background-image: repeating-linear-gradient(
+    105deg,
+    var(--gold) 30%,
+    var(--dark-shadow) 5%,
+    var(--gold) 12%
+  );
   color: transparent;
   filter: drop-shadow(5px 15px 15px black);
   transform: scaleY(1.05);
@@ -97,19 +97,19 @@ div.bg {
 }
 
 div.fg {
-  background-image:
-    repeating-linear-gradient(
-      5deg,
-      var(--gold) 0%,
-      var(--light-shadow) 23%,
-      var(--gold) 31%
-    );
+  background-image: repeating-linear-gradient(
+    5deg,
+    var(--gold) 0%,
+    var(--light-shadow) 23%,
+    var(--gold) 31%
+  );
   color: #1e0105;
   transform: scale(1);
 }
 
 .item-2 {
-  width: 40%;
+  width: 25%;
+  margin-top: 5px;
 }
 
 .item-2-list {
@@ -119,6 +119,7 @@ div.fg {
   justify-content: left;
   gap: 2rem;
   align-items: center;
+  margin-top: 15px;
 }
 
 .item-2 a,
@@ -162,6 +163,7 @@ a:active {
   -webkit-box-shadow: 1px 1px 2px 2px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow: 1px 1px 2px 2px #ccc; /* Firefox 3.5 - 3.6 */
   box-shadow: 2px 0 3px 3px #2c0000;
+  box-shadow: 2px 0 3px 3px #2c0000;
 }
 
 .container-food:hover {
@@ -172,7 +174,6 @@ a:active {
 .container-food > img {
   border-radius: 1rem 1rem 0 0;
   height: auto;
-
   /* height: 16rem; */
   transition: all 0.4s ease-in-out;
 }
@@ -340,6 +341,7 @@ a:active {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  padding-left: 0;
 }
 
 #comments li {
@@ -364,15 +366,19 @@ a:active {
 #comments li .comment-author {
   font-weight: 700;
   font-size: 0.9rem;
+  padding-top: 10px;
 }
 
 #comments li .comment-date {
   color: #999;
   font-size: 0.75rem;
+  padding-top: 10px;
 }
 
 #comments li .comment-message {
   font-size: 0.75rem;
+  margin-left: 0;
+  padding-top: 10px;
 }
 
 #comment-form {
