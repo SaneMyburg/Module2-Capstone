@@ -754,6 +754,7 @@
     "zwitch": "^1.0.5"
   },
   "devDependencies": {
+    "hint": "^7.1.4",
     "image-webpack-loader": "^8.1.0"
   },
   "scripts": {
