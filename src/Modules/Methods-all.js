@@ -2,17 +2,21 @@ import { getMealData, postData } from './Api-call.js';
 import FoodList from './display.js';
 
 const foodList = new FoodList();
+
 // Assigning Involvement API link
 const InvoApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/'
   + 'capstoneApi/apps/';
-const InvoApiIDLikes = 'zX9lc5HNiZeTfJrwouGw';
+const InvoApiIDLikes = 'pEBOCO8kM8wbh9szd9yj';
+// const InvoApiIDLikes = 'zX9lc5HNiZeTfJrwouGw';
 const InvoApiIDComments = 'TOQ2SNV5DoVM0bMfqikl';
 const likesUrl = '/likes';
 const commentsUrl = '/comments';
+
 // Assigning Meals DB API link
 const MealApiUrl = 'https://www.themealdb.com/api/json/v1/1/';
 const MealCatagory = 'filter.php?a=Italian';
 const mealFullUrl = MealApiUrl + MealCatagory;
+
 // Selecting IDs from the HTML...
 const foodListWrapper = document.getElementById('all-foods');
 const commentPopup = document.getElementById('comment-popup');
@@ -32,26 +36,6 @@ export const getComments = (id) => new Promise((resolve) => {
     resolve();
   });
 });
-
-const commentPost = (id, input, textarea) => {
-  const commentmainUrl = InvoApiUrl + InvoApiIDComments + commentsUrl;
-  const data = {
-    item_id: id,
-    username: input.value,
-    comment: textarea.value,
-  };
-  postData(commentmainUrl, data).then((result) => {
-    if (result.status === 201) {
-      input.value = '';
-      textarea.value = '';
-      const commentWrapper = document.getElementById('all-comments');
-      commentWrapper.innerHTML += `<li class="single-comment">
-              <h4 class="name-commenter">${data.username}</h4>
-              <p class="comment-message">${data.comment}</p>
-              </li> `;
-    }
-  });
-};
 
 export const displayPopUp = (id) => {
   commentPopup.classList.add('show');
@@ -81,12 +65,75 @@ export const displayPopUp = (id) => {
       </div>
     </div>`;
 
+  // const commentPost = (id, input, textarea) => {
+  //   const commentmainUrl = InvoApiUrl + InvoApiIDComments + commentsUrl;
+  //   const data = {
+  //     item_id: id,
+  //     username: input.value,
+  //     comment: textarea.value,
+  //   };
+  //   postData(commentmainUrl, data).then((result) => {
+  //     if (result.status === 201) {
+  //       input.value = '';
+  //       textarea.value = '';
+  //       const commentWrapper = document.getElementById('all-comments');
+  //       const newComment = `
+  //       <li class="single-comment">
+  //         <h4 class="name-commenter">${data.username}</h4>
+  //         <p class="comment-message">${data.comment}</p>
+  //       </li>
+  //     `;
+  //       commentWrapper.insertAdjacentHTML('beforeend', newComment);
+  //     }
+  //   });
+  // };
+
+  // const commentForm = document.getElementById('comment-form');
+  // commentForm.addEventListener('submit', (e) => {
+  //   e.preventDefault();
+  //   commentPost(id, e.target.name, e.target.comment);
+  // });
+
+  // Get the comments from the API and display them on the page
+  const fetchComments = () => {
+    const commentmainUrl = InvoApiUrl + InvoApiIDComments + commentsUrl;
+    getMealData(commentmainUrl).then((data) => {
+      const commentWrapper = document.getElementById('all-comments');
+      commentWrapper.innerHTML = '';
+      data.forEach((comment) => {
+        commentWrapper.innerHTML += `<li class="single-comment">
+        <h4 class="name-commenter">${comment.username}</h4>
+        <p class="comment-message">${comment.comment}</p>
+      </li>`;
+      });
+    });
+  };
+
+  // Call fetchComments to display the initial comments on page load
+  fetchComments();
+
+  // Function to post a comment to the API and update the HTML
+  const commentPost = (id, input, textarea) => {
+    const commentmainUrl = InvoApiUrl + InvoApiIDComments + commentsUrl;
+    const data = {
+      item_id: id,
+      username: input.value,
+      comment: textarea.value,
+    };
+    postData(commentmainUrl, data).then((result) => {
+      if (result.status === 201) {
+        input.value = '';
+        textarea.value = '';
+        fetchComments();
+      }
+    });
+  };
+
   const commentForm = document.getElementById('comment-form');
   commentForm.addEventListener('submit', (e) => {
     e.preventDefault();
     commentPost(id, e.target.name, e.target.comment);
   });
-
 
   const btnClose = document.getElementById('popup-btn-close');
   btnClose.addEventListener('click', () => {
@@ -152,7 +199,7 @@ export const likeFood = (id) => {
   });
 };
 
-export const showAllFood = () => {
+export const mealsShowAll = () => {
   foodListWrapper.innerHTML = '';
   Object.keys(foodList.foods).forEach((foodId) => {
     const food = foodList.foods[foodId];
@@ -191,22 +238,22 @@ export const showAllFood = () => {
 
 export const getAllFoodData = () => new Promise((resolve) => {
   getMealData(mealFullUrl).then((result) => {
-    foodList.addFoods(result.meals);
+    foodList.addMeals(result.meals);
     resolve();
   });
 });
 
-export const getAllLikes = () => new Promise((resolve) => {
-  const ALL_LIKES_API_URL = InvoApiUrl + InvoApiIDLikes + likesUrl;
-  getMealData(ALL_LIKES_API_URL).then((likesFromAPI) => {
+export const getAllLikes = () => new Promise((res) => {
+  const likesLinkAPI = InvoApiUrl + InvoApiIDLikes + likesUrl;
+  getMealData(likesLinkAPI).then((likesFromAPI) => {
     likesFromAPI.forEach((likeObject) => {
       foodList.setLikes(likeObject.item_id, likeObject.likes);
     });
-    resolve();
+    res();
   });
 });
 
-export const displayitemCounter = () => {
+export const ItemCounterDisplay = () => {
   const size = foodList.getItemsCount();
   itemCounter.innerHTML = `<span class="food-count-icon">${size}<span>`;
 };

@@ -3,7 +3,7 @@ export default class FoodList {
     this.foods = {};
   }
 
-  addFood(id, title, image) {
+  addSingleMeal(id, title, image) {
     this.foods[id] = {
       title,
       image,
@@ -11,9 +11,9 @@ export default class FoodList {
     };
   }
 
-  addFoods(allFoods) {
+  addMeals(allFoods) {
     allFoods.forEach((food) => {
-      this.addFood(food.idMeal, food.strMeal, food.strMealThumb);
+      this.addSingleMeal(food.idMeal, food.strMeal, food.strMealThumb);
     });
   }
 

@@ -1,18 +1,18 @@
 // index.js
 import './style.css';
 import {
-  showAllFood,
+  mealsShowAll,
   getAllFoodData,
   getAllLikes,
-  displayitemCounter,
+  ItemCounterDisplay,
 } from './Modules/Methods-all.js';
 
 getAllFoodData().then(() => {
   getAllLikes()
     .then(() => {
-      showAllFood();
+      mealsShowAll();
     })
     .then(() => {
-      displayitemCounter();
+      ItemCounterDisplay();
     });
 });

@@ -1,11 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap");
+
 * {
   border: 0;
   margin: -8px 0 0 0;
   font-family: lato, sans-serif;
 }
 
+:root {
+  --gold: #ff924e;
+  --light-shadow: #fff;
+  --dark-shadow: #9b8358;
+}
+
 body {
   background-color: bisque;
+}
+
+header {
+  margin-top: 0;
+  padding-top: 0;
+  border: 2px solid white;
 }
 
 .nav-bar {
@@ -20,20 +35,78 @@ body {
   height: 5rem;
   display: flex;
   width: 55%;
-
-  /* align-items: center; */
 }
 
 .icon {
   background: url("../assets/food-icon.png");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 15%;
+  width: 13%;
+  margin-left: 20%;
 }
 
-.name {
+/* .name {
   color: white;
   margin-top: 20px;
+  font-family: "Calligraffitti", cursive;
+  font-weight: 700;
+  font-size: 3rem;
+  position: absolute;
+  text-shadow: -15px 5px 20px #ced0d3;
+  top: 5%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #f9f1cc;
+  text-shadow: 1px 1px 0px #ffb650, 3px 3px 0px #ffd662, 5px 5px 0px #ff80bf,
+    8px 8px 0px #ef5097, 10px 10px 0px #6868ac, 12px 12px 12px #90b1e0;
+} */
+
+.wrapper {
+  display: grid;
+  grid-template-areas: "overlap";
+  place-content: center;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.wrapper > div {
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  color: #363833;
+  font-family: "Exo", sans-serif;
+  font-weight: 800;
+  font-size: calc(2rem + ((1vw - 7.68px) * 1.2));
+  grid-area: overlap;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 4px transparent;
+}
+
+div.bg {
+  background-image:
+    repeating-linear-gradient(
+      105deg,
+      var(--gold) 30%,
+      var(--dark-shadow) 5%,
+      var(--gold) 12%
+    );
+  color: transparent;
+  filter: drop-shadow(5px 15px 15px black);
+  transform: scaleY(1.05);
+  transform-origin: top;
+}
+
+div.fg {
+  background-image:
+    repeating-linear-gradient(
+      5deg,
+      var(--gold) 0%,
+      var(--light-shadow) 23%,
+      var(--gold) 31%
+    );
+  color: #1e0105;
+  transform: scale(1);
 }
 
 .item-2 {
@@ -346,19 +419,19 @@ a:active {
   font-size: medium;
 }
 
-.lds-roller {
+.meal-Ids {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
 }
 
-.lds-roller div {
-  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+.meal-Ids div {
+  animation: meal-Ids 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   transform-origin: 40px 40px;
 }
 
-.lds-roller div::after {
+.meal-Ids div::after {
   content: " ";
   display: block;
   position: absolute;
@@ -369,79 +442,79 @@ a:active {
   margin: -4px 0 0 -4px;
 }
 
-.lds-roller div:nth-child(1) {
+.meal-Ids div:nth-child(1) {
   animation-delay: -0.036s;
 }
 
-.lds-roller div:nth-child(1)::after {
+.meal-Ids div:nth-child(1)::after {
   top: 63px;
   left: 63px;
 }
 
-.lds-roller div:nth-child(2) {
+.meal-Ids div:nth-child(2) {
   animation-delay: -0.072s;
 }
 
-.lds-roller div:nth-child(2)::after {
+.meal-Ids div:nth-child(2)::after {
   top: 68px;
   left: 56px;
 }
 
-.lds-roller div:nth-child(3) {
+.meal-Ids div:nth-child(3) {
   animation-delay: -0.108s;
 }
 
-.lds-roller div:nth-child(3)::after {
+.meal-Ids div:nth-child(3)::after {
   top: 71px;
   left: 48px;
 }
 
-.lds-roller div:nth-child(4) {
+.meal-Ids div:nth-child(4) {
   animation-delay: -0.144s;
 }
 
-.lds-roller div:nth-child(4)::after {
+.meal-Ids div:nth-child(4)::after {
   top: 72px;
   left: 40px;
 }
 
-.lds-roller div:nth-child(5) {
+.meal-Ids div:nth-child(5) {
   animation-delay: -0.18s;
 }
 
-.lds-roller div:nth-child(5)::after {
+.meal-Ids div:nth-child(5)::after {
   top: 71px;
   left: 32px;
 }
 
-.lds-roller div:nth-child(6) {
+.meal-Ids div:nth-child(6) {
   animation-delay: -0.216s;
 }
 
-.lds-roller div:nth-child(6)::after {
+.meal-Ids div:nth-child(6)::after {
   top: 68px;
   left: 24px;
 }
 
-.lds-roller div:nth-child(7) {
+.meal-Ids div:nth-child(7) {
   animation-delay: -0.252s;
 }
 
-.lds-roller div:nth-child(7)::after {
+.meal-Ids div:nth-child(7)::after {
   top: 63px;
   left: 17px;
 }
 
-.lds-roller div:nth-child(8) {
+.meal-Ids div:nth-child(8) {
   animation-delay: -0.288s;
 }
 
-.lds-roller div:nth-child(8)::after {
+.meal-Ids div:nth-child(8)::after {
   top: 56px;
   left: 12px;
 }
 
-@keyframes lds-roller {
+@keyframes meal-Ids {
   0% {
     transform: rotate(0deg);
   }
