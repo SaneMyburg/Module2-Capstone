@@ -87,6 +87,7 @@ export const displayPopUp = (id) => {
     commentPost(id, e.target.name, e.target.comment);
   });
 
+
   const btnClose = document.getElementById('popup-btn-close');
   btnClose.addEventListener('click', () => {
     commentPopup.classList.remove('show');
