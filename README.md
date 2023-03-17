@@ -1,8 +1,9 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h3><b>Webpack Setup</b></h3>
+  <h3><b>Besu Italian Food Zone</b></h3>
 </div>
+
 
 # 📗 Table of Contents
 
@@ -25,21 +26,28 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [Webpack] <a name="about-project"></a>
+# 📖 [Besu Italian Food Zone] <a name="about-project"></a>
 
-> This is a setup for webpack to use in my projects.
+> This project is a simple app taht displays the Italian food category. It displays and updates the counter for likes, commenst and food list.
 
-**[Webpack]** is ...
+**[Leaderboard List-App]** is ...
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Webpack
-
+- HTML
+- CSS
+- Webpack 
+- JavaScript ES6 
+- API
+- Jest Testing
+ 
 ### Key Features <a name="key-features"></a>
 
-> Tis is just a simple setup of webpack to use in my projects.
+- **[Adds and updates likes]**
+- **[Adds and updates comments]** 
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -54,7 +62,6 @@
 > Get a link of this repository and clone it to your local machine.
 
 To get a local copy up and running, follow these steps:
-
 - Get a copy of the project
 - Come into the project directory
 - Open the project using code editor of your choice
@@ -63,7 +70,6 @@ To get a local copy up and running, follow these steps:
 ### Prerequisites
 
 In order to run this project you need:
-
 - You need a GitHub account.
 - You need to have a Git client installed on your computer.
 - You need to have a copy of the HTML CSS website codebase on your computer.
@@ -75,12 +81,38 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/SaneMyburg/Webpack.git
+  git clone https://github.com/SaneMyburg/Module2-Capstone
 ```
 
 ### Install
 
-Install this project with:
+ ```sh
+ cd Module2-Capstone
+ ```
+ ```sh
+ npm install
+ ```
+
+### Usage
+
+```sh
+npm run build
+```
+```sh
+npm start
+```
+
+### Run tests
+
+```sh
+npx hint .
+```
+```sh
+npx stylelint "**/*.{css,scss}"
+```
+```sh
+npx eslint .
+```
 
 ### Usage
 
@@ -90,6 +122,7 @@ To run the project, simply run the HTML document to preferrably Google Chrome.
 
 To run tests, you can use Chrome Developer tools, simply run the HTML document in Google Chrome and right-click the HTML element you want to inspect. Click on "Inspect" and you will have the tools to run, analyze, and even debug the code.
 
+
 ### Deployment
 
 You can deploy this project using:
@@ -97,32 +130,44 @@ Github Pages
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
 ## 👥 Authors <a name="authors"></a>
 
 > Sane Myburg
-> 👤 **Author1**
+👤 **Author1**
 
 - GitHub: [@githubhandle](https://github.com/SaneMyburg)
 - Twitter: [@twitterhandle](https://twitter.com/@SaneMyburg)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/SaneMyburg)
 
+> Besufekad Alemu
+👤 **Author1**
+
+- GitHub: [@Besufekad-HAZ](https://github.com/Besufekad-HAZ)
+- Twitter: [@BesufekadAlemu7](https://twitter.com/BesufekadAlemu7)
+- LinkedIn: [@besura](www.linkedin.com/in/besura)
+
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Advanced styles**
+- [ ] **Add more meal categories**
+- [ ] **Adding some backend features**
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/SaneMyburg/Webpack/issues/).
+Feel free to check the [issues page](https://github.com/SaneMyburg/Module2-Capstone/issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ⭐️ Show your support <a name="support"></a>
 
 > Give a ⭐️ if you like this project!
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -131,6 +176,7 @@ Feel free to check the [issues page](https://github.com/SaneMyburg/Webpack/issue
 I would like to thank [Microverse](www.microverse.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- LICENSE -->
 
