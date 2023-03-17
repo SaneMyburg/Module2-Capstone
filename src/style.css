@@ -84,12 +84,13 @@ header {
 }
 
 div.bg {
-  background-image: repeating-linear-gradient(
-    105deg,
-    var(--gold) 30%,
-    var(--dark-shadow) 5%,
-    var(--gold) 12%
-  );
+  background-image:
+    repeating-linear-gradient(
+      105deg,
+      var(--gold) 30%,
+      var(--dark-shadow) 5%,
+      var(--gold) 12%
+    );
   color: transparent;
   filter: drop-shadow(5px 15px 15px black);
   transform: scaleY(1.05);
@@ -97,12 +98,13 @@ div.bg {
 }
 
 div.fg {
-  background-image: repeating-linear-gradient(
-    5deg,
-    var(--gold) 0%,
-    var(--light-shadow) 23%,
-    var(--gold) 31%
-  );
+  background-image:
+    repeating-linear-gradient(
+      5deg,
+      var(--gold) 0%,
+      var(--light-shadow) 23%,
+      var(--gold) 31%
+    );
   color: #1e0105;
   transform: scale(1);
 }
@@ -163,7 +165,6 @@ a:active {
   -webkit-box-shadow: 1px 1px 2px 2px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow: 1px 1px 2px 2px #ccc; /* Firefox 3.5 - 3.6 */
   box-shadow: 2px 0 3px 3px #2c0000;
-  box-shadow: 2px 0 3px 3px #2c0000;
 }
 
 .container-food:hover {
@@ -174,6 +175,7 @@ a:active {
 .container-food > img {
   border-radius: 1rem 1rem 0 0;
   height: auto;
+
   /* height: 16rem; */
   transition: all 0.4s ease-in-out;
 }
