@@ -315,6 +315,7 @@ a:active {
   padding: 1rem;
   border-radius: 0.75rem;
   color: #333;
+  width: 60%;
 }
 
 #comments-header {
