@@ -1,6 +1,6 @@
 * {
   border: 0;
-  margin: 0;
+  margin: -8px 0 0 0;
   font-family: lato, sans-serif;
 }
 
@@ -28,15 +28,17 @@ body {
   background: url("../assets/food-icon.png");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 40%;
+  width: 15%;
 }
 
 .name {
   color: white;
+  margin-top: 20px;
 }
 
 .item-2 {
-  width: 40%;
+  width: 25%;
+  margin-top: 5px;
 }
 
 .item-2-list {
@@ -46,6 +48,7 @@ body {
   justify-content: left;
   gap: 2rem;
   align-items: center;
+  margin-top: 15px;
 }
 
 .item-2 a,
@@ -263,6 +266,7 @@ a:active {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  padding-left: 0;
 }
 
 #comments li {
@@ -296,6 +300,7 @@ a:active {
 
 #comments li .comment-message {
   font-size: 0.75rem;
+  margin-left: 0;
 }
 
 #comment-form {
