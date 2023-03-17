@@ -761,9 +761,10 @@
     "jest-environment-jsdom": "^29.5.0"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "start": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "jest --watch *.js"
   },
   "repository": {
     "type": "git",
