@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import  getMealData  from '../__Mock__/mockapi';
+import getMealData from '../__Mock__/mockapi.js';
 
 describe('getMealData function', () => {
   test('should return an object with meals array', () => getMealData().then((data) => {
