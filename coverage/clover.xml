@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1679062875917" clover="3.2.0">
+  <project timestamp="1679062875918" name="All files">
+    <metrics statements="123" coveredstatements="24" conditionals="20" coveredconditionals="0" methods="46" coveredmethods="5" elements="189" coveredelements="29" complexity="0" loc="123" ncloc="123" packages="1" files="3" classes="3"/>
+    <file name="Api-call.js" path="C:\Microverse All\Microverse New\JS capstone\Module2-Capstone\src\Modules\Api-call.js">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+    </file>
+    <file name="Methods-all.js" path="C:\Microverse All\Microverse New\JS capstone\Module2-Capstone\src\Modules\Methods-all.js">
+      <metrics statements="106" coveredstatements="20" conditionals="14" coveredconditionals="0" methods="32" coveredmethods="2"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="26" count="0" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="28" count="0" type="stmt"/>
+      <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="30" count="0" type="stmt"/>
+      <line num="31" count="0" type="stmt"/>
+      <line num="32" count="0" type="stmt"/>
+      <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="35" count="0" type="stmt"/>
+      <line num="36" count="0" type="stmt"/>
+      <line num="40" count="1" type="stmt"/>
+      <line num="41" count="0" type="stmt"/>
+      <line num="42" count="0" type="stmt"/>
+      <line num="98" count="0" type="stmt"/>
+      <line num="99" count="0" type="stmt"/>
+      <line num="100" count="0" type="stmt"/>
+      <line num="101" count="0" type="stmt"/>
+      <line num="102" count="0" type="stmt"/>
+      <line num="103" count="0" type="stmt"/>
+      <line num="104" count="0" type="stmt"/>
+      <line num="113" count="0" type="stmt"/>
+      <line num="116" count="0" type="stmt"/>
+      <line num="117" count="0" type="stmt"/>
+      <line num="118" count="0" type="stmt"/>
+      <line num="123" count="0" type="stmt"/>
+      <line num="124" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="125" count="0" type="stmt"/>
+      <line num="126" count="0" type="stmt"/>
+      <line num="127" count="0" type="stmt"/>
+      <line num="132" count="0" type="stmt"/>
+      <line num="133" count="0" type="stmt"/>
+      <line num="134" count="0" type="stmt"/>
+      <line num="135" count="0" type="stmt"/>
+      <line num="138" count="0" type="stmt"/>
+      <line num="139" count="0" type="stmt"/>
+      <line num="140" count="0" type="stmt"/>
+      <line num="142" count="0" type="stmt"/>
+      <line num="143" count="0" type="stmt"/>
+      <line num="144" count="0" type="stmt"/>
+      <line num="145" count="0" type="stmt"/>
+      <line num="146" count="0" type="stmt"/>
+      <line num="150" count="0" type="stmt"/>
+      <line num="151" count="0" type="stmt"/>
+      <line num="152" count="0" type="stmt"/>
+      <line num="153" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="154" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="155" count="0" type="stmt"/>
+      <line num="158" count="0" type="stmt"/>
+      <line num="159" count="0" type="stmt"/>
+      <line num="160" count="0" type="stmt"/>
+      <line num="161" count="0" type="stmt"/>
+      <line num="162" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="164" count="0" type="stmt"/>
+      <line num="169" count="0" type="stmt"/>
+      <line num="170" count="0" type="stmt"/>
+      <line num="181" count="0" type="stmt"/>
+      <line num="186" count="1" type="stmt"/>
+      <line num="187" count="0" type="stmt"/>
+      <line num="188" count="0" type="stmt"/>
+      <line num="191" count="0" type="stmt"/>
+      <line num="192" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="193" count="0" type="stmt"/>
+      <line num="194" count="0" type="stmt"/>
+      <line num="195" count="0" type="stmt"/>
+      <line num="196" count="0" type="stmt"/>
+      <line num="197" count="0" type="stmt"/>
+      <line num="202" count="1" type="stmt"/>
+      <line num="203" count="0" type="stmt"/>
+      <line num="204" count="0" type="stmt"/>
+      <line num="205" count="0" type="stmt"/>
+      <line num="206" count="0" type="stmt"/>
+      <line num="223" count="0" type="stmt"/>
+      <line num="224" count="0" type="stmt"/>
+      <line num="225" count="0" type="stmt"/>
+      <line num="226" count="0" type="stmt"/>
+      <line num="230" count="0" type="stmt"/>
+      <line num="231" count="0" type="stmt"/>
+      <line num="232" count="0" type="stmt"/>
+      <line num="233" count="0" type="stmt"/>
+      <line num="234" count="0" type="stmt"/>
+      <line num="239" count="1" type="stmt"/>
+      <line num="240" count="1" type="stmt"/>
+      <line num="241" count="0" type="stmt"/>
+      <line num="242" count="0" type="stmt"/>
+      <line num="246" count="1" type="stmt"/>
+      <line num="247" count="0" type="stmt"/>
+      <line num="248" count="0" type="stmt"/>
+      <line num="249" count="0" type="stmt"/>
+      <line num="250" count="0" type="stmt"/>
+      <line num="252" count="0" type="stmt"/>
+      <line num="256" count="1" type="stmt"/>
+      <line num="257" count="0" type="stmt"/>
+      <line num="258" count="0" type="stmt"/>
+    </file>
+    <file name="display.js" path="C:\Microverse All\Microverse New\JS capstone\Module2-Capstone\src\Modules\display.js">
+      <metrics statements="15" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="11" coveredmethods="2"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="16" count="0" type="stmt"/>
+      <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="22" count="0" type="stmt"/>
+      <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="31" count="0" type="stmt"/>
+      <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="33" count="0" type="stmt"/>
+      <line num="35" count="0" type="stmt"/>
+      <line num="39" count="0" type="stmt"/>
+      <line num="43" count="0" type="stmt"/>
+      <line num="47" count="0" type="stmt"/>
+      <line num="51" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
