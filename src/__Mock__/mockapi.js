@@ -20,4 +20,4 @@ function getMealData() {
   });
 }
 
-exports.getMealData = getMealData;
+export {getMealData};
