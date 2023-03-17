@@ -754,8 +754,8 @@
     "zwitch": "^1.0.5"
   },
   "devDependencies": {
-    "hint": "^7.1.4",
-    "image-webpack-loader": "^8.1.0"
+    "hint": "^2.0.0",
+    "image-webpack-loader": "^4.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
