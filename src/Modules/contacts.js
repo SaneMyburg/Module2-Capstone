@@ -5,11 +5,11 @@ const contactsPopUp = () => {
   contactUs.innerHTML = `      
       <div id="popup-btn-close">&times;</div>
         <div class="contact-h2">
-          <h2>Contacts</h2>
+          <h2>Get in touch</h2>
         </div>
       <div class="contact-details">
         <div>
-         <p>
+         <p class="contact-info">
           👤 Sane Myburg <br>
           <a href="https://github.com/SaneMyburg">GitHub</a><br>
           <a href="https://twitter.com/@SaneMyburg">Twitter</a><br>
@@ -17,7 +17,7 @@ const contactsPopUp = () => {
          </p>
         </div>
         <div>
-         <p>
+         <p class="contact-info">
           👤 Besufekad Alem <br>
           <a href="https://github.com/Besufekad-HAZ">GitHub</a><br>
           <a href="https://twitter.com/BesufekadAlemu7">Twitter</a><br>
