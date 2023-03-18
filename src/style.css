@@ -4,7 +4,7 @@
 * {
   border: 0;
   margin: -8px 0 0 0;
-  font-family: 'lato', sans-serif;
+  font-family: "lato", sans-serif;
 }
 
 :root {
@@ -303,7 +303,25 @@ a:active {
   align-items: center;
 }
 
+.comments-header-submit {
+  margin-top: 1px;
+  font-size: 19px;
+}
+
 .food-count-icon {
+  margin: 0.6rem 0.3rem;
+  padding: 0.2rem;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 13px;
+  background: #fff;
+  color: #000c;
+  width: 1.5rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.food-count-icon-2 {
   margin: 0.6rem 0.3rem;
   padding: 0.2rem;
   font-size: 15px;
