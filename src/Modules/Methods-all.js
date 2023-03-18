@@ -7,7 +7,6 @@ const foodList = new FoodList();
 const InvoApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/'
   + 'capstoneApi/apps/';
 const InvoApiIDLikes = 'pEBOCO8kM8wbh9szd9yj';
-// const InvoApiIDLikes = 'zX9lc5HNiZeTfJrwouGw';
 const InvoApiIDComments = 'TOQ2SNV5DoVM0bMfqikl';
 const likesUrl = '/likes';
 const commentsUrl = '/comments';
@@ -64,26 +63,7 @@ export const displayPopUp = (id) => {
         </ul>
       </div>
     </div>`;
-    
-  // Get the comments from the API and display them on the page
-  const fetchComments = () => {
-    const commentmainUrl = InvoApiUrl + InvoApiIDComments + commentsUrl;
-    getMealData(commentmainUrl).then((data) => {
-      const commentWrapper = document.getElementById('all-comments');
-      commentWrapper.innerHTML = '';
-      data.forEach((comment) => {
-        commentWrapper.innerHTML += `<li class="single-comment">
-        <h4 class="name-commenter">${comment.username}</h4>
-        <p class="comment-message">${comment.comment}</p>
-      </li>`;
-      });
-    });
-  };
 
-  // Call fetchComments to display the initial comments on page load
-  fetchComments();
-
-  // Function to post a comment to the API and update the HTML
   const commentPost = (id, input, textarea) => {
     const commentmainUrl = InvoApiUrl + InvoApiIDComments + commentsUrl;
     const data = {
@@ -95,7 +75,14 @@ export const displayPopUp = (id) => {
       if (result.status === 201) {
         input.value = '';
         textarea.value = '';
-        fetchComments();
+        const commentWrapper = document.getElementById('comments');
+        const newComment = `
+        <li class="single-comment">
+          <h4 class="name-commenter">${data.username}</h4>
+          <p class="comment-message">${data.comment}</p>
+        </li>
+      `;
+        commentWrapper.insertAdjacentHTML('beforeend', newComment);
       }
     });
   };
@@ -226,5 +213,5 @@ export const getAllLikes = () => new Promise((res) => {
 
 export const ItemCounterDisplay = () => {
   const size = foodList.getItemsCount();
-  itemCounter.innerHTML = `<span class="food-count-icon">${size}<span>`;
+  itemCounter.innerHTML = `<span class="food-count-icon">${size}</span>`;
 };

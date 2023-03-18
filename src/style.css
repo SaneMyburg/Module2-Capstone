@@ -4,7 +4,7 @@
 * {
   border: 0;
   margin: -8px 0 0 0;
-  font-family: lato, sans-serif;
+  font-family: 'lato', sans-serif;
 }
 
 :root {
@@ -315,6 +315,7 @@ a:active {
   padding: 1rem;
   border-radius: 0.75rem;
   color: #333;
+  width: 60%;
 }
 
 #comments-header {
