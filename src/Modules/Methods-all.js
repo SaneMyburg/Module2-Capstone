@@ -64,36 +64,7 @@ export const displayPopUp = (id) => {
         </ul>
       </div>
     </div>`;
-
-  // const commentPost = (id, input, textarea) => {
-  //   const commentmainUrl = InvoApiUrl + InvoApiIDComments + commentsUrl;
-  //   const data = {
-  //     item_id: id,
-  //     username: input.value,
-  //     comment: textarea.value,
-  //   };
-  //   postData(commentmainUrl, data).then((result) => {
-  //     if (result.status === 201) {
-  //       input.value = '';
-  //       textarea.value = '';
-  //       const commentWrapper = document.getElementById('all-comments');
-  //       const newComment = `
-  //       <li class="single-comment">
-  //         <h4 class="name-commenter">${data.username}</h4>
-  //         <p class="comment-message">${data.comment}</p>
-  //       </li>
-  //     `;
-  //       commentWrapper.insertAdjacentHTML('beforeend', newComment);
-  //     }
-  //   });
-  // };
-
-  // const commentForm = document.getElementById('comment-form');
-  // commentForm.addEventListener('submit', (e) => {
-  //   e.preventDefault();
-  //   commentPost(id, e.target.name, e.target.comment);
-  // });
-
+    
   // Get the comments from the API and display them on the page
   const fetchComments = () => {
     const commentmainUrl = InvoApiUrl + InvoApiIDComments + commentsUrl;
