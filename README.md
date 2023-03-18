@@ -11,7 +11,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
-  - [ 💻Loom Presentation Video](#Presentation-video)
+  - [ 💻Project Presentation Video](#Presentation-video)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -50,13 +50,13 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 💻 Project Presentation Video <a name="Presentation-video"></a>
+### 💻 Project Presentation Video <a name="Presentation-video"></a>
 
 - [Video Link](https://drive.google.com/file/d/1ofhEY6g0EY7Q_TVok8A754rEvN1DqNOe/view?usp=sharing)
 
-## 🚀 Live Demo <a name="live-demo"></a>
+### 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://SaneMyburg/github.io)
+- [Live Demo Link](https://sanemyburg.github.io/Module2-Capstone/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
