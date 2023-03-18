@@ -1,5 +1,18 @@
 // index.js
 import './style.css';
-import getData from './Modules/display.js';
+import {
+  mealsShowAll,
+  getAllFoodData,
+  getAllLikes,
+  ItemCounterDisplay,
+} from './Modules/Methods-all.js';
 
-getData();
+getAllFoodData().then(() => {
+  getAllLikes()
+    .then(() => {
+      mealsShowAll();
+    })
+    .then(() => {
+      ItemCounterDisplay();
+    });
+});

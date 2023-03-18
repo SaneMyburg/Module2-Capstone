@@ -1,39 +1,53 @@
-import { addLikes, showLikes } from './likes.js';
+export default class FoodList {
+  constructor() {
+    this.foods = {};
+  }
 
-async function getData() {
-  const res = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?a=Italian');
-  const data = await res.json();
-  const allFoods = document.querySelector('.all-foods');
-  let output = '';
-  data.meals.forEach((meal) => {
-    output += `
-      <div class="meal">
-        <div class="div-img">
-          <img src="${meal.strMealThumb}">
-        </div>
-        <div class="div-like">
-          <p>${meal.strMeal}</p>
-          <div class="div-heart" id="div-heart">
-            <i class="uil uil-heart" id="${meal.idMeal}"></i>
-            <label id="id${meal.idMeal}"></label>
-          </div>
-        </div>
-        <button id="${meal.idMeal}">Comment</button>
-      </div>
-    `;
-  });
-  allFoods.innerHTML = output;
+  addSingleMeal(id, title, image) {
+    this.foods[id] = {
+      title,
+      image,
+      comments: [],
+    };
+  }
 
-  const likes = document.querySelectorAll('.uil.uil-heart');
-
-  likes.forEach((like) => {
-    like.addEventListener('click', (e) => {
-      const { id } = e.target;
-      addLikes(id);
-      showLikes(id);
+  addMeals(allFoods) {
+    allFoods.forEach((food) => {
+      this.addSingleMeal(food.idMeal, food.strMeal, food.strMealThumb);
     });
-    showLikes(like.id);
-  });
-}
+  }
 
-export default getData;
+  setLikes(id, likes) {
+    if (Object.keys(this.foods).includes(id)) {
+      this.foods[id].likes = likes;
+    }
+  }
+
+  getLikes(id) {
+    return this.foods[id].likes || 0;
+  }
+
+  getLikesText(id) {
+    const likes = this.getLikes(id);
+    if (likes <= 1) {
+      return `${likes} like`;
+    }
+    return `${likes} likes`;
+  }
+
+  addComments(id, comments) {
+    this.foods[id].comments = comments;
+  }
+
+  getComments(id) {
+    return this.foods[id].comments;
+  }
+
+  getCommentsCount(id) {
+    return this.foods[id].comments.length;
+  }
+
+  getItemsCount() {
+    return Object.keys(this.foods).length;
+  }
+}

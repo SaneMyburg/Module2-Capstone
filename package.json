@@ -37,7 +37,6 @@
     "autoprefixer": "^9.8.8",
     "available-typed-arrays": "^1.0.5",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^29.4.3",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-jest-hoist": "^29.4.3",
     "babel-plugin-polyfill-corejs2": "^0.3.3",
@@ -354,7 +353,6 @@
     "istanbul-lib-source-maps": "^4.0.1",
     "istanbul-reports": "^3.1.5",
     "jake": "^10.8.5",
-    "jest": "^29.4.3",
     "jest-changed-files": "^29.4.3",
     "jest-circus": "^29.4.3",
     "jest-cli": "^29.4.3",
@@ -754,12 +752,19 @@
     "zwitch": "^1.0.5"
   },
   "devDependencies": {
-    "image-webpack-loader": "^8.1.0"
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^29.5.0",
+    "hint": "^7.1.4",
+    "image-webpack-loader": "^8.1.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
     "start": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "jest --watch *.js"
   },
   "repository": {
     "type": "git",
