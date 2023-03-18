@@ -6,6 +6,7 @@ import {
   getAllLikes,
   ItemCounterDisplay,
 } from './Modules/Methods-all.js';
+import contactsPopUp from './Modules/contacts.js';
 
 getAllFoodData().then(() => {
   getAllLikes()
@@ -15,4 +16,9 @@ getAllFoodData().then(() => {
     .then(() => {
       ItemCounterDisplay();
     });
+});
+
+const contactInfo = document.getElementById('contact-info');
+contactInfo.addEventListener('click', () => {
+  contactsPopUp();
 });
