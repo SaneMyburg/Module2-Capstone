@@ -6,7 +6,7 @@ import {
   getAllLikes,
   ItemCounterDisplay,
 } from './Modules/Methods-all.js';
-import contactsPopUp from './Modules/contact.js';
+import contactsPopUp from './Modules/contacts.js';
 
 getAllFoodData().then(() => {
   getAllLikes()
