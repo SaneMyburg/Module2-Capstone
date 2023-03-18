@@ -20,4 +20,4 @@ function getMealData() {
   });
 }
 
-export default getMealData ;
+export default getMealData;

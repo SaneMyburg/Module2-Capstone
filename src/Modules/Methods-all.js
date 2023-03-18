@@ -213,5 +213,5 @@ export const getAllLikes = () => new Promise((res) => {
 
 export const ItemCounterDisplay = () => {
   const size = foodList.getItemsCount();
-  itemCounter.innerHTML = `<span class="food-count-icon">${size}<span>`;
+  itemCounter.innerHTML = `<span class="food-count-icon">${size}</span>`;
 };
