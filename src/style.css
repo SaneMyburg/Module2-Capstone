@@ -45,24 +45,6 @@ header {
   margin-left: 20%;
 }
 
-/* .name {
-  color: white;
-  margin-top: 20px;
-  font-family: "Calligraffitti", cursive;
-  font-weight: 700;
-  font-size: 3rem;
-  position: absolute;
-  text-shadow: -15px 5px 20px #ced0d3;
-  top: 5%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #f9f1cc;
-  text-shadow: 1px 1px 0px #ffb650, 3px 3px 0px #ffd662, 5px 5px 0px #ff80bf,
-    8px 8px 0px #ef5097, 10px 10px 0px #6868ac, 12px 12px 12px #90b1e0;
-} */
-
 .wrapper {
   display: grid;
   grid-template-areas: "overlap";
@@ -130,6 +112,10 @@ a:focus,
 a:active {
   text-decoration: none;
   color: inherit;
+}
+
+#contact-info {
+  cursor: pointer;
 }
 
 .foods-container {
@@ -239,12 +225,6 @@ a:active {
 .container-food:hover > img {
   transform: scale(1.15);
   display: block;
-}
-
-#about {
-  background-color: #111;
-  padding: 7rem 2rem;
-  color: #eee;
 }
 
 #comment-popup {
@@ -537,4 +517,43 @@ footer {
 .footer-desc {
   width: 60%;
   margin: 0 auto;
+}
+
+.contacts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(253, 249, 249, 0.986);
+  z-index: 999;
+}
+
+.contact-details {
+ display: flex;
+ justify-content: center;
+ gap: 10%;
+} 
+
+.contact-h2 {
+  margin: 10% auto;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-details p {
+  margin: 0;
+}
+
+.contact-details a {
+  margin: 30px;
+}
+
+#popup-btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
 }
