@@ -4,7 +4,6 @@
   <h3><b>Besu Italian Food Zone</b></h3>
 </div>
 
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -12,6 +11,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+  - [ 💻Project Presentation Video](#Presentation-video)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -38,22 +38,25 @@
 
 - HTML
 - CSS
-- Webpack 
-- JavaScript ES6 
+- Webpack
+- JavaScript ES6
 - API
 - Jest Testing
- 
+
 ### Key Features <a name="key-features"></a>
 
 - **[Adds and updates likes]**
-- **[Adds and updates comments]** 
-
+- **[Adds and updates comments]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo"></a>
+### 💻 Project Presentation Video <a name="Presentation-video"></a>
 
-- [Live Demo Link](https://SaneMyburg/github.io)
+- [Video Link](https://drive.google.com/file/d/1ofhEY6g0EY7Q_TVok8A754rEvN1DqNOe/view?usp=sharing)
+
+### 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://sanemyburg.github.io/Module2-Capstone/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -62,6 +65,7 @@
 > Get a link of this repository and clone it to your local machine.
 
 To get a local copy up and running, follow these steps:
+
 - Get a copy of the project
 - Come into the project directory
 - Open the project using code editor of your choice
@@ -70,6 +74,7 @@ To get a local copy up and running, follow these steps:
 ### Prerequisites
 
 In order to run this project you need:
+
 - You need a GitHub account.
 - You need to have a Git client installed on your computer.
 - You need to have a copy of the HTML CSS website codebase on your computer.
@@ -86,18 +91,20 @@ Clone this repository to your desired folder:
 
 ### Install
 
- ```sh
- cd Module2-Capstone
- ```
- ```sh
- npm install
- ```
+```sh
+cd Module2-Capstone
+```
+
+```sh
+npm install
+```
 
 ### Usage
 
 ```sh
 npm run build
 ```
+
 ```sh
 npm start
 ```
@@ -107,9 +114,11 @@ npm start
 ```sh
 npx hint .
 ```
+
 ```sh
 npx stylelint "**/*.{css,scss}"
 ```
+
 ```sh
 npx eslint .
 ```
@@ -122,7 +131,6 @@ To run the project, simply run the HTML document to preferrably Google Chrome.
 
 To run tests, you can use Chrome Developer tools, simply run the HTML document in Google Chrome and right-click the HTML element you want to inspect. Click on "Inspect" and you will have the tools to run, analyze, and even debug the code.
 
-
 ### Deployment
 
 You can deploy this project using:
@@ -130,24 +138,21 @@ Github Pages
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 👥 Authors <a name="authors"></a>
 
 > Sane Myburg
-👤 **Author1**
+> 👤 **Author1**
 
 - GitHub: [@githubhandle](https://github.com/SaneMyburg)
 - Twitter: [@twitterhandle](https://twitter.com/@SaneMyburg)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/SaneMyburg)
 
 > Besufekad Alemu
-👤 **Author1**
+> 👤 **Author1**
 
 - GitHub: [@Besufekad-HAZ](https://github.com/Besufekad-HAZ)
 - Twitter: [@BesufekadAlemu7](https://twitter.com/BesufekadAlemu7)
 - LinkedIn: [@besura](www.linkedin.com/in/besura)
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -168,7 +173,6 @@ Feel free to check the [issues page](https://github.com/SaneMyburg/Module2-Capst
 
 > Give a ⭐️ if you like this project!
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
@@ -176,7 +180,6 @@ Feel free to check the [issues page](https://github.com/SaneMyburg/Module2-Capst
 I would like to thank [Microverse](www.microverse.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- LICENSE -->
 

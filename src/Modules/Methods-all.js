@@ -91,6 +91,11 @@ export const displayPopUp = (id) => {
   commentForm.addEventListener('submit', (e) => {
     e.preventDefault();
     commentPost(id, e.target.name, e.target.comment);
+    const commentsHeader = document.getElementById('comments-header');
+    const size = foodList.getCommentsCount(id);
+    commentsHeader.innerHTML = `
+       <h3 class="comments-header-submit">Comments:</h3>
+      <span class="food-count-icon">${size + 1}</span>`;
   });
 
   const btnClose = document.getElementById('popup-btn-close');
@@ -113,6 +118,11 @@ export const displayPopUp = (id) => {
     return `${diffInDays} days ago`;
   };
 
+  // const numberOfComments = async (count) => {
+  //   const h4 = document.getElementById("numberOfComments");
+  //   h4.innerHTML = `Comments(${count})`;
+  // };
+
   getComments(id).then(() => {
     const { comments } = foodList.foods[id];
     const commentsHeader = document.getElementById('comments-header');
@@ -122,7 +132,6 @@ export const displayPopUp = (id) => {
       commentsHeader.innerHTML += `<span class="food-count-icon">${foodList.getCommentsCount(
         id,
       )}</span>`;
-
       //       comments will be added here.........
       comments.forEach((comment) => {
         commentWrapper.innerHTML += `<li class="comment">
